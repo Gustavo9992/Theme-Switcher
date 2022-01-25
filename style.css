@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+	--dark: #292C35;
+	--light: #F1F1F1;
+	--label: #111;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    transition: background 0.25s linear;
+
+    background: var(--light);
+}
+
+body.dark {
+    background: var(--dark);
+}
+
+div.toggle {
+    background-color: #000000;
+    width: 14.75rem;
+    height: 6.5rem;
+    padding: 0.3rem;
+
+    border-radius: 3.7rem;
+}
+
+input.checkbox {
+    position: absolute;
+    opacity: 0;
+}
+
+input.checkbox:checked + .label .switch {
+    transform: translateX(8.2rem);
+    
+}
+label.label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    position: relative;
+    
+}
+    img {
+        width: 6rem;
+    height: 6rem;
+}
+
+div.switch {
+    width: 5.8rem;
+    height: 5.8rem;
+
+    position: absolute;
+    transition: transform 0.3s linear;
+
+    top: 0.1rem;
+    left: 0.1rem;
+
+    border-radius: 90%;
+
+    background: white;
+}
